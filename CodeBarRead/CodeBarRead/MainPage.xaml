@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeBarRead.MainPage"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+            <StackLayout>
+                <Label Text="BarCode Read!" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+                <Label Text="by Daniel Nogales" FontSize="Small" HorizontalTextAlignment="End" TextColor="White"/>
+                <Label x:Name="scanResultText" TextColor="WhiteSmoke" FontSize="30"/>
+            </StackLayout>
+        </Frame>
+        <zxing:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult"/>
+        <!--<ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    
+                                </Grid.ColumnDefinitions>
+                                <Label></Label>
+                                <StackLayout>
+                                    
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                        
+                    </ViewCell>
+                </DataTemplate>
+                    
+            </ListView.ItemTemplate>
+        </ListView>-->
+    </StackLayout>
+
+</ContentPage>
